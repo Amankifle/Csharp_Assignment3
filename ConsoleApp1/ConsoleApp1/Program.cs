@@ -13,7 +13,7 @@ namespace ConsoleApp1
         class Circle : Ishape
         {
             public double radius { get; set; }
-            static double PI = 3.14;
+            static readonly double PI = 3.14;
 
             public override void calArea()
             {
@@ -62,7 +62,7 @@ namespace ConsoleApp1
                 do
                 {
                     Console.WriteLine("Choose your choice:");
-                    x = int.Parse(Console.ReadLine());
+                    x  = Convert.ToInt32(Console.ReadLine());
                     if ((x != 1 && x != 2 && x != 3))
                         Console.WriteLine("Error");
                 } while (x != 1 && x != 2 && x != 3);
@@ -71,7 +71,7 @@ namespace ConsoleApp1
                 {
                     Circle c = new Circle();
                     Console.Write("Enter the radius: ");
-                    c.radius = double.Parse(Console.ReadLine());
+                    c.radius = Convert.ToDouble(Console.ReadLine());
                     c.calArea();
                     c.calPerimeter();
                     Console.ReadLine();
@@ -82,9 +82,9 @@ namespace ConsoleApp1
 
                     rectangle r = new rectangle();
                     Console.Write("Enter the length: ");
-                    r.length = double.Parse(Console.ReadLine());
+                    r.length =  Convert.ToDouble(Console.ReadLine());
                     Console.Write("Enter the width: ");
-                    r.width = double.Parse(Console.ReadLine());
+                    r.width = Convert.ToDouble(Console.ReadLine());
                     r.calArea();
                     r.calPerimeter();
                     Console.ReadLine();
