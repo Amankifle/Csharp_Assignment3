@@ -5,12 +5,12 @@ namespace ConsoleApp1
     internal class Program
     {
 
-        abstract class Ishape
+        abstract class shape
         {
             public abstract void calArea();
             public abstract void calPerimeter();
         }
-        class Circle : Ishape
+        class Circle : shape
         {
             public double radius { get; set; }
             static readonly double PI = 3.14;
@@ -30,7 +30,7 @@ namespace ConsoleApp1
                 Console.WriteLine("The perimeter of this circle is: " + Perimeter);
             }
         }
-        class rectangle : Ishape
+        class rectangle : shape
         {
             public double length { get; set; }
             public double width { get; set; }
